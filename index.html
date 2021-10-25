@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>.</title>
+
+        <link rel="stylesheet" href="importance/style.css">
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body style="background-color: black; color: white;">
+        <script>
+            var Titles = [
+                "fart loading."
+                , "loading..."
+                , "load!!"
+                , "Harru was here!"
+                , "L o  AA     di       nG"
+                , "LOOOOOOOOOAAAAAAADDDDDDDIIIIIINNNNNNNGGGGGGG"
+                , "loading Template loading Template"
+                , "Why wouldn't it load?"
+                , "It's infinite!!!"
+                , "GOD DAMN IT LOAD!!"
+            ] 
+            var Title = '';
+            var TitleExample = Math.floor(Math.random() * Titles.length);
+            Title += Titles[TitleExample];
+            document.title = Title;
+        </script>
+        <div>
+            <img src='importance/load.png' id='load'>
+            <br>
+            loading...
+        </div>
+
+        <script>
+            let classcookie = document.cookie
+
+            if (classcookie === null){
+                classcookie = 'general=1'
+            }
+            classcookie = classcookie.split('general=')
+            classcookie = classcookie[2]
+
+            var Classes = [
+                'saturate',
+                'contrast',
+                'brightness',
+                'blur',
+                'invert',
+                'sepia'
+            ]
+            var Class = '';
+            var ClassExample = Math.floor(Math.random() * Classes.length);
+            if(ClassExample === classcookie){
+                while(true){
+                    var Newcook = Math.floor(Math.random() * Classes.length);
+                    
+                    if(Newcook != ClassExample){
+                        ClassExample = Newcook;
+                        break;
+                    }
+                }
+            }
+
+            var Img = document.getElementById('load')
+            Class += Classes[ClassExample]
+
+            Img.className = Class
+            document.cookie = 'general=' + Class
+        </script>
+    </body>
+</html>
