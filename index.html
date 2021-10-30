@@ -39,10 +39,8 @@
             let classcookie = document.cookie
 
             if (classcookie === null){
-                classcookie = 'general=1'
+                classcookie = '1'
             }
-            classcookie = classcookie.split('general=')
-            classcookie = classcookie[2]
 
             var Classes = [
                 'saturate',
@@ -69,7 +67,7 @@
             Class += Classes[ClassExample]
 
             Img.className = Class
-            document.cookie = 'general=' + Class
+            document.cookie = Class
         </script>
     </body>
 </html>
